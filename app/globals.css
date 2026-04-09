@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #d48822;
+  --color-brand-dark: #aa6717;
+  --color-ink: #171510;
+  --color-muted: #6a645b;
+  --color-sand-50: #f6f1e8;
+  --color-sand-100: #eedfc5;
+  --color-sand-200: #dec5a0;
+  --color-sand-300: #c7ad84;
+  --color-sand-400: #a38c6b;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/media/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/media/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/media/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/media/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/media/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer base {
+  html {
+    /* Lenis handles smooth scrolling — disable native CSS smooth scroll */
+    scroll-behavior: auto !important;
+  }
+
+  body {
+    font-family: "Montserrat", system-ui, sans-serif;
+    background:
+      radial-gradient(circle at top left, rgba(212, 136, 34, 0.14), transparent 24rem),
+      radial-gradient(circle at top right, rgba(23, 21, 16, 0.06), transparent 28rem),
+      linear-gradient(180deg, #faf7f1 0%, #f6f1e8 100%);
+  }
+
+  ::selection {
+    background: rgba(212, 136, 34, 0.22);
+  }
+}
+
+@layer components {
+  .site-shell {
+    @apply mx-auto w-[90vw] max-w-[1800px];
+  }
+
+  .section-space {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .site-card {
+    @apply rounded-[2rem] border border-white/70 bg-white shadow-[0_25px_90px_rgba(33,24,15,0.08)];
+  }
+
+  .btn-primary {
+    @apply rounded-full bg-brand px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-dark hover:shadow-[0_16px_40px_rgba(212,136,34,0.35)];
+  }
+
+  .btn-secondary {
+    @apply rounded-full border border-sand-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:border-brand hover:text-brand;
+  }
+
+  .form-input {
+    @apply w-full rounded-[1.2rem] border border-sand-200 bg-sand-50 px-4 py-3 text-sm text-ink outline-none transition placeholder:text-muted/70 focus:border-brand focus:bg-white focus:ring-4 focus:ring-brand/10;
+  }
+}
