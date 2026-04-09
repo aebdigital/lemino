@@ -256,21 +256,31 @@ export const servicePages: Record<'lesenie' | 'stropneDebnenie' | 'stavebneVytah
         ],
       },
       {
-        title: 'Stojky a debniace dosky',
+        title: 'Stropné stojky PERI a DOKA',
         description: [
-          'Stropné stojky PERI a DOKA slúžia ako vertikálne podopretie dočasných konštrukcií a debniace dosky 3S zaručujú presný a hladký povrch stropu.',
+          'Stropné stojky PERI a DOKA sú oceľové stojky s plynulým nastavením dĺžky, ktoré sa používajú ako vertikálne podopretie dočasných konštrukcií.',
         ],
         bullets: [
           'Dĺžky stojok v ponuke: 250 cm, 300 cm, 350 cm, 400 cm, 550 cm',
           'Nosnosť stojok 20 kN až 35 kN',
-          'Štandardná hrúbka dosky 21 mm',
-          'Dĺžky dosiek 1,5 m, 2 m a 2,5 m',
         ],
         images: [
           {
             src: '/media/stropne-debnenie-peri-1-2048x1152-1-e1743101685343.jpg',
             alt: 'Stropné stojky PERI a DOKA',
           },
+        ],
+      },
+      {
+        title: 'Debniace dosky 3S',
+        description: [
+          'Debniace dosky 3S sú laminované 3-vrstvé lepené dosky, ktoré zaručujú presný a hladký povrch stropu.',
+        ],
+        bullets: [
+          'Štandardná hrúbka dosky 21 mm',
+          'Dĺžky 1,5 m, 2 m a 2,5 m',
+        ],
+        images: [
           {
             src: '/media/doska.png',
             alt: 'Debniaca doska 3S',
