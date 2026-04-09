@@ -79,7 +79,7 @@ export const homeServicePreviews: ServicePreview[] = [
     label: 'Lešenie',
     title: 'Fasádne a mobilné lešenia',
     description:
-      'Ponúkame montáž a prenájom fasádneho, priestorového, mobilného a špeciálneho lešenia pre stavby, opravy aj rekonštrukcie.',
+      'Ponúkame montáž a prenájom fasádneho, priestorového, mobilného a špeciálneho lešenia. Využiť ho môžete pri zatepľovaní, murovaní, oprave komína alebo pri rekonštrukčných a montážnych prácach.',
     image: {
       src: '/media/lesenie_4-e1743107303233.jpg',
       alt: 'Fasádne lešenie Lemino na stavbe',
@@ -90,7 +90,7 @@ export const homeServicePreviews: ServicePreview[] = [
     label: 'Debnenie',
     title: 'Stropné debnenie',
     description:
-      'Systémové debnenie pre železobetónové konštrukcie, ktoré zvládne rýchlu montáž, presné nasadenie aj výhodný prenájom.',
+      'Stropné debnenie je jednoduchý systém na zadebnenie vodorovných železobetónových konštrukcií, ktorý umožní zrealizovať akýkoľvek pôdorys a veľkosť.',
     image: {
       src: '/media/debnenie_2-e1743107761381.jpg',
       alt: 'Stropné debnenie na stavbe',
@@ -101,7 +101,7 @@ export const homeServicePreviews: ServicePreview[] = [
     label: 'Výťahy a sklzy',
     title: 'Stavebné výťahy a sklzy',
     description:
-      'Výťahy GEDA, vrátky a sklzy na stavebnú suť pre efektívnejšiu logistiku materiálu a čistejší chod stavby.',
+      'Stavebné výťahy sú skvelou pomôckou nielen pre pokrývačov striech. Nasadenie môže byť kolmé alebo šikmé. Znižuje náklady a prácnosť pri preprave materiálu. Nosnosť až 250 kg.',
     image: {
       src: '/media/vytah-GEDA-lift-3-1.jpg',
       alt: 'Stavebný výťah GEDA na stavbe',
@@ -141,13 +141,13 @@ export const servicePages: Record<'lesenie' | 'stropneDebnenie' | 'stavebneVytah
       {
         title: 'Fasádne lešenia',
         description: [
-          'Rámové lešenie PERI UP T 70 umožňuje hospodárne a technicky riešiť všetky lešenárske práce. Univerzálny systém spĺňa optimálne predpoklady pre horizontálnu aj vertikálnu kombináciu dielov.',
-          'Samozrejmosťou je osvedčená kvalita, jednoduchosť pri montáži a bezpečné fasádne riešenie aj pri náročnejších objektoch.',
+          'Rámové lešenie PERI UP T 70 umožňuje hospodárne a technicky riešiť všetky lešenárske práce. Univerzálny systém spĺňa optimálne predpoklady pre možnosti horizontálnej aj vertikálnej kombinácie dielov. Systém PERI UP T 70 navyše ponúka osvedčenú kvalitu, jednoduchosť pri montáži a predovšetkým bezpečné stavebné fasádne riešenie.',
+          'Cena prenájmu je individuálna v závislosti od veľkosti projektu a podmienok stavby.',
         ],
         bullets: [
           'Veľkosť polí lešenia 1 m, 1,5 m, 2,5 m a 3 m',
-          'Doplnkové diely ako konzoly, premostenia či zastrešenie',
-          'Montáž bez potreby náradia',
+          'Doplnkové diely ako konzoly, premostenia a zastrešenie',
+          'Montáž bez potreby náradia — diely do seba logicky zapadajú',
           'Možnosť projektu nasadenia lešenia pre vašu stavbu',
         ],
         images: [
@@ -223,8 +223,9 @@ export const servicePages: Record<'lesenie' | 'stropneDebnenie' | 'stavebneVytah
       {
         title: 'Kompletný systém debnenia',
         description: [
-          'Prenajímame systém PERI MULTIFLEX s použitím nosníkov GT 24 a VT 20, vysokonosných stojok PERI a DOKA a všetkého potrebného príslušenstva.',
-          'Kladačský plán pripravíme spolu s cenovou kalkuláciou. Výsledná cena závisí od veľkosti projektu, dĺžky prenájmu aj náročnosti stropnej konštrukcie.',
+          'Prenajímame celý systém stropného debnenia PERI MULTIFLEX s použitím nosníkov GT 24 a VT 20, vysokonosných stojok PERI a DOKA a všetkého potrebného príslušenstva. Celý systém podopretia stropnej dosky je výhodný najmä pre rýchlu, presnú montáž, vysokú variabilitu a priaznivú cenu.',
+          'Časti systému sú nasadené na stavbe na základe kladačského plánu, ktorý vám predložíme spolu s cenovou kalkuláciou.',
+          'Jednotlivé časti systému — stojky, nosníky aj dosky — vám samozrejme vieme prenajať aj samostatne. Cena prenájmu kompletného systému je však oveľa výhodnejšia.',
         ],
         images: [
           {

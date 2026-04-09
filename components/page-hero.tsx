@@ -12,7 +12,7 @@ type PageHeroProps = {
 
 export function PageHero({ eyebrow, title, lead, buttonLabel, buttonHref = '/kontakt', image }: PageHeroProps) {
   return (
-    <section className="relative h-[30vh] min-h-[320px] overflow-hidden">
+    <section className="relative h-[50vh] min-h-[420px] overflow-hidden">
       <Image
         src={image.src}
         alt={image.alt}

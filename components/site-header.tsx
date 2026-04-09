@@ -32,7 +32,7 @@ export function SiteHeader() {
     <>
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/20 bg-sand-50/75 shadow-[0_18px_60px_rgba(22,18,14,0.08)] backdrop-blur-md">
         <div className="site-shell">
-          <div className="flex h-20 items-center justify-between gap-6">
+          <div className="flex h-14 items-center justify-between gap-6 lg:h-20">
             <Link href="/" className="shrink-0">
               <Image
                 src="/media/logo_lemino_cele.png"
@@ -72,7 +72,7 @@ export function SiteHeader() {
                 onClick={() => setOpen((v) => !v)}
                 aria-label={open ? 'Zatvoriť menu' : 'Otvoriť menu'}
                 aria-expanded={open}
-                className="relative flex h-10 w-10 flex-col items-center justify-center gap-[5px] rounded-full border border-sand-200 bg-white shadow-sm transition hover:border-brand lg:hidden"
+                className="relative flex h-10 w-10 flex-col items-center justify-center gap-[5px] transition lg:hidden"
               >
                 <span
                   className={`block h-0.5 w-5 rounded-full bg-ink transition-all duration-300 ${
@@ -101,9 +101,9 @@ export function SiteHeader() {
           open ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
-        <div className="bg-sand-50/95 pt-20 backdrop-blur-md">
-          <div className="site-shell border-b border-sand-200 py-6 shadow-[0_20px_60px_rgba(22,18,14,0.12)]">
-            <nav className="flex flex-col gap-1">
+        <div className="bg-sand-50/95 pt-14 backdrop-blur-md lg:pt-20">
+          <div className="border-b border-sand-200 py-6 shadow-[0_20px_60px_rgba(22,18,14,0.12)]">
+            <nav className="flex flex-col gap-1 px-4 sm:px-6">
               {navigation.map((item) => {
                 const active = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
                 return (
@@ -121,13 +121,6 @@ export function SiteHeader() {
                 );
               })}
             </nav>
-
-            <Link
-              href="/kontakt"
-              className="btn-primary mt-5 flex w-full justify-center"
-            >
-              Kontakt
-            </Link>
           </div>
         </div>
       </div>
