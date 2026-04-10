@@ -63,16 +63,17 @@ export function DebnienieTabs({ sections }: { sections: Section[] }) {
           </ul>
         ) : null}
 
-        <div className={`mt-8 grid gap-4 ${current.images.length > 1 ? 'sm:grid-cols-2' : 'max-w-sm'}`}>
+        <div className={`mt-8 grid items-start gap-4 ${current.images.length > 1 ? 'sm:grid-cols-2' : 'max-w-sm'}`}>
           {current.images.map((image) => (
             <div key={image.src} className="site-card overflow-hidden p-2">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-[1.3rem]">
+              <div className="overflow-hidden rounded-[1.3rem]">
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  fill
+                  width={800}
+                  height={600}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
-                  className="object-cover"
+                  className="h-auto w-full object-cover"
                 />
               </div>
             </div>

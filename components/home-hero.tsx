@@ -74,14 +74,11 @@ export function HomeHero() {
               className="mt-8 flex flex-wrap gap-3"
               style={{ animation: 'fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.52s both' }}
             >
-              <Link href="/kontakt" className="btn-primary hidden sm:inline-flex">
-                Kontakt
-              </Link>
               <Link
-                href="#sluzby"
+                href="/lesenie"
                 className="btn-primary inline-flex w-full justify-center sm:w-auto"
               >
-                Naše služby
+                Naše lešenie
               </Link>
             </div>
           </div>

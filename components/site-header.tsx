@@ -64,8 +64,8 @@ export function SiteHeader() {
             </nav>
 
             <div className="flex items-center gap-3">
-              <Link href="/kontakt" className="btn-primary hidden lg:inline-flex">
-                Kontakt
+              <Link href="/kontakt" className="hidden lg:inline-flex items-center rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-ink/80">
+                Cenová ponuka
               </Link>
 
               <button

@@ -62,13 +62,14 @@ export default function StropneDebneniePage() {
               </FadeUp>
 
               <FadeUp delay={100} className="site-card overflow-hidden p-3">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-[1.4rem]">
+                <div className="overflow-hidden rounded-[1.4rem]">
                   <Image
                     src={overview.images[0].src}
                     alt={overview.images[0].alt}
-                    fill
+                    width={800}
+                    height={600}
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-cover"
+                    className="h-auto w-full object-cover"
                   />
                 </div>
               </FadeUp>

@@ -66,16 +66,17 @@ export default function LeseniePage() {
                   ) : null}
                 </FadeUp>
 
-                <FadeUp delay={100} className={`grid gap-4 ${section.images.length > 1 ? 'sm:grid-cols-2' : ''}`}>
+                <FadeUp delay={100} className={`grid items-start gap-4 ${section.images.length > 1 ? 'sm:grid-cols-2' : ''}`}>
                   {section.images.map((image) => (
                     <div key={image.src} className="site-card overflow-hidden p-2">
-                      <div className="relative aspect-[4/3] overflow-hidden rounded-[1.3rem]">
+                      <div className="overflow-hidden rounded-[1.3rem]">
                         <Image
                           src={image.src}
                           alt={image.alt}
-                          fill
+                          width={800}
+                          height={600}
                           sizes="(max-width: 1024px) 100vw, 25vw"
-                          className="object-cover"
+                          className="h-auto w-full object-cover"
                         />
                       </div>
                     </div>

@@ -156,8 +156,8 @@ export const servicePages: Record<'lesenie' | 'stropneDebnenie' | 'stavebneVytah
             alt: 'Fasádne lešenie na objekte',
           },
           {
-            src: '/media/20220915_105715.jpeg',
-            alt: 'Detail pracovného lešenia Lemino',
+            src: '/media/lemino-matadorka.png',
+            alt: 'Lešenie Lemino Matadorka',
           },
         ],
       },
@@ -206,6 +206,10 @@ export const servicePages: Record<'lesenie' | 'stropneDebnenie' | 'stavebneVytah
       { src: '/media/photo_20220927_131730-1.jpg', alt: 'Projekt lešenia 2' },
       { src: '/media/lesenia-lemino-8-scaled-1-e1743105811859.jpg', alt: 'Projekt lešenia 3' },
       { src: '/media/lesenia-lemino-6-scaled-1.jpg', alt: 'Projekt lešenia 4' },
+      { src: '/media/20220915_105715.jpeg', alt: 'Projekt lešenia 5' },
+      { src: '/media/bazovskeho.jpg', alt: 'Lešenie Bázovskeho' },
+      { src: '/media/bazovskeho-lemino-lesenie.jpg', alt: 'Lešenie Lemino Bázovskeho' },
+      { src: '/media/20250628_121044.jpg', alt: 'Projekt lešenia' },
     ],
     callToActionLabel: 'Objednať lešenie',
   },
@@ -312,7 +316,7 @@ export const servicePages: Record<'lesenie' | 'stropneDebnenie' | 'stavebneVytah
     lead:
       'Výťahy, vrátky a sklzy výrazne zrýchľujú pohyb materiálu na stavbe a znižujú prácnosť tam, kde rozhoduje každé naloženie aj každý meter.',
     heroImage: {
-      src: '/media/vytah-GEDA-lift-3-1.jpg',
+      src: '/media/vytah-geda-lift-hero.jpg',
       alt: 'Stavebný výťah GEDA LIFT',
     },
     sections: [
@@ -331,8 +335,8 @@ export const servicePages: Record<'lesenie' | 'stropneDebnenie' | 'stavebneVytah
         ],
         images: [
           {
-            src: '/media/vytah-GEDA-lift-3-1.jpg',
-            alt: 'Výťah GEDA LIFT 250',
+            src: '/media/vytah-geda-lift-lemino.jpg',
+            alt: 'Výťah GEDA LIFT 250 Lemino',
           },
           {
             src: '/media/vytah-geda-lift-scaled-1.jpg',
@@ -350,6 +354,10 @@ export const servicePages: Record<'lesenie' | 'stropneDebnenie' | 'stavebneVytah
           {
             src: '/media/3-5.jpg',
             alt: 'Stavebný vrátok GEDA Star 150 comfort',
+          },
+          {
+            src: '/media/vratok-geda-star.jpg',
+            alt: 'Vrátok GEDA Star na stavbe',
           },
         ],
       },
@@ -374,6 +382,7 @@ export const servicePages: Record<'lesenie' | 'stropneDebnenie' | 'stavebneVytah
     gallery: [
       { src: '/media/vytah-GEDA-lift-3-1.jpg', alt: 'Výťah projekt 1' },
       { src: '/media/vytah-geda-lift-scaled-1.jpg', alt: 'Výťah projekt 2' },
+      { src: '/media/bazovskeho-vytah.jpg', alt: 'Výťah GEDA na Bázovskeho' },
       { src: '/media/3-5.jpg', alt: 'Vrátok projekt 3' },
       { src: '/media/2-4.jpg', alt: 'Sklz projekt 4' },
       { src: '/media/1-5.jpg', alt: 'Sklz projekt 5' },
@@ -398,7 +407,7 @@ export const team = [
   {
     name: 'Boris Holečka',
     role: 'Vedúci technik',
-    image: '/media/1man-person-people-human-profession-happy-683029-pxhere.com_-300x300-1-150x150.webp',
+    image: '/media/boris-holecka.jpg',
     bio: 'Zabezpečuje plynulý chod prác a bezpečnosť v každom momente. Je to človek, na ktorého sa dá pokojne spoľahnúť.',
   },
 ];
