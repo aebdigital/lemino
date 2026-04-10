@@ -9,6 +9,11 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.lemino.sk'),
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
   title: {
     default: 'Lemino | Lešenie, debnenie a výťahy Bratislava',
     template: '%s | Lemino Bratislava',
