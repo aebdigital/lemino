@@ -23,16 +23,46 @@ export const metadata: Metadata = {
     'GEDA LIFT 250',
     'GEDA Star 150',
   ],
+  alternates: { canonical: 'https://www.lemino.sk/stavebne-vytahy' },
   openGraph: {
     title: 'Stavebné výťahy Bratislava — Lemino s.r.o.',
     description: 'GEDA LIFT 250, vrátky a sklzy na prenájom v Bratislave. Nosnosť do 250 kg, montáž bez náradia.',
-    images: [{ url: '/media/vytah-GEDA-lift-3-1.jpg' }],
+    url: 'https://www.lemino.sk/stavebne-vytahy',
+    images: [{ url: '/media/vytah-GEDA-lift-3-1.jpg', width: 1200, height: 630, alt: 'Stavebný výťah GEDA LIFT — Lemino Bratislava' }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Stavebné výťahy Bratislava — Lemino s.r.o.',
+    description: 'GEDA LIFT 250, vrátky a sklzy na prenájom v Bratislave. Nosnosť do 250 kg, montáž bez náradia.',
+    images: ['/media/vytah-GEDA-lift-3-1.jpg'],
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Domov', item: 'https://www.lemino.sk' },
+    { '@type': 'ListItem', position: 2, name: 'Stavebné výťahy Bratislava', item: 'https://www.lemino.sk/stavebne-vytahy' },
+  ],
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://www.lemino.sk/stavebne-vytahy#service',
+  name: 'Stavebné výťahy Bratislava',
+  description: 'Prenájom stavebných výťahov GEDA LIFT 250, vrátkov GEDA Star a sklzov na suť v Bratislave. Rýchla montáž bez náradia, nosnosť do 250 kg.',
+  provider: { '@id': 'https://www.lemino.sk/#business' },
+  areaServed: { '@type': 'City', name: 'Bratislava' },
+  serviceType: 'Prenájom stavebných výťahov',
 };
 
 export default function StavebneVytahyPage() {
   return (
     <main className="-mt-20 lg:-mt-24">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <PageHero
         eyebrow={pageData.eyebrow}
         title={pageData.title}

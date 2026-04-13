@@ -10,11 +10,34 @@ export const metadata: Metadata = {
   title: 'Kontakt | Lemino s.r.o. Bratislava',
   description: 'Kontaktujte Lemino s.r.o. v Bratislave. Dopyt na lešenie, debnenie alebo výťah. Formulár, telefón, mapa.',
   keywords: ['kontakt Lemino', 'lešenie dopyt Bratislava', 'prenájom lešenia kontakt'],
+  alternates: { canonical: 'https://www.lemino.sk/kontakt' },
+  openGraph: {
+    title: 'Kontakt — Lemino s.r.o. Bratislava',
+    description: 'Kontaktujte Lemino s.r.o. v Bratislave. Dopyt na lešenie, debnenie alebo výťah. Formulár, telefón, mapa.',
+    url: 'https://www.lemino.sk/kontakt',
+    images: [{ url: '/media/uvodna-fotka.jpg', width: 1200, height: 630, alt: 'Lemino s.r.o. — kontakt Bratislava' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kontakt — Lemino s.r.o. Bratislava',
+    description: 'Kontaktujte Lemino s.r.o. v Bratislave. Dopyt na lešenie, debnenie alebo výťah.',
+    images: ['/media/uvodna-fotka.jpg'],
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Domov', item: 'https://www.lemino.sk' },
+    { '@type': 'ListItem', position: 2, name: 'Kontakt', item: 'https://www.lemino.sk/kontakt' },
+  ],
 };
 
 export default function KontaktPage() {
   return (
     <main className="-mt-20 lg:-mt-24">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <PageHero
         eyebrow="Kontakt"
         title="Ozvite sa nám"

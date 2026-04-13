@@ -24,11 +24,39 @@ export const metadata: Metadata = {
     'DOKA stojky',
     'systémové debnenie',
   ],
+  alternates: { canonical: 'https://www.lemino.sk/stropne-debnenie' },
   openGraph: {
     title: 'Stropné debnenie Bratislava — Lemino s.r.o.',
     description: 'Systém PERI MULTIFLEX na prenájom v Bratislave. Nosníky, stojky, dosky. Kladačský plán v cene.',
-    images: [{ url: '/media/debnenie_2-e1743107761381.jpg' }],
+    url: 'https://www.lemino.sk/stropne-debnenie',
+    images: [{ url: '/media/debnenie_2-e1743107761381.jpg', width: 1200, height: 630, alt: 'Stropné debnenie PERI MULTIFLEX — Lemino Bratislava' }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Stropné debnenie Bratislava — Lemino s.r.o.',
+    description: 'Systém PERI MULTIFLEX na prenájom v Bratislave. Nosníky GT 24, stojky, dosky. Kladačský plán v cene.',
+    images: ['/media/debnenie_2-e1743107761381.jpg'],
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Domov', item: 'https://www.lemino.sk' },
+    { '@type': 'ListItem', position: 2, name: 'Stropné debnenie Bratislava', item: 'https://www.lemino.sk/stropne-debnenie' },
+  ],
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://www.lemino.sk/stropne-debnenie#service',
+  name: 'Stropné debnenie Bratislava',
+  description: 'Prenájom systémového debnenia PERI MULTIFLEX v Bratislave. Nosníky GT 24, stojky PERI a DOKA, debniace dosky 3S. Kladačský plán v cene.',
+  provider: { '@id': 'https://www.lemino.sk/#business' },
+  areaServed: { '@type': 'City', name: 'Bratislava' },
+  serviceType: 'Prenájom stropného debnenia',
 };
 
 export default function StropneDebneniePage() {
@@ -36,6 +64,8 @@ export default function StropneDebneniePage() {
 
   return (
     <main className="-mt-20 lg:-mt-24">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <PageHero
         eyebrow={pageData.eyebrow}
         title={pageData.title}

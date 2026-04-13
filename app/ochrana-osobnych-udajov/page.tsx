@@ -6,6 +6,18 @@ import { company, privacySections } from '@/data/site';
 export const metadata: Metadata = {
   title: 'Ochrana osobných údajov',
   description: 'Zásady ochrany osobných údajov pre Lemino s.r.o. vrátane informácií o kontaktnom formulári a súboroch cookies.',
+  alternates: { canonical: 'https://www.lemino.sk/ochrana-osobnych-udajov' },
+  robots: { index: false, follow: false },
+  openGraph: {
+    title: 'Ochrana osobných údajov — Lemino s.r.o.',
+    description: 'Zásady ochrany osobných údajov pre Lemino s.r.o. vrátane informácií o kontaktnom formulári a súboroch cookies.',
+    url: 'https://www.lemino.sk/ochrana-osobnych-udajov',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Ochrana osobných údajov — Lemino s.r.o.',
+    description: 'Zásady ochrany osobných údajov pre Lemino s.r.o.',
+  },
 };
 
 export default function OchranaOsobnychUdajovPage() {

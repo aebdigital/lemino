@@ -24,16 +24,46 @@ export const metadata: Metadata = {
     'CUSTERS handy',
     'montáž lešenia',
   ],
+  alternates: { canonical: 'https://www.lemino.sk/lesenie' },
   openGraph: {
     title: 'Prenájom lešenia Bratislava — Lemino s.r.o.',
     description: 'Fasádne a mobilné lešenie na prenájom v Bratislave. Systém PERI UP, hliníkové lešenia CUSTERS. Montáž a projekt v cene.',
-    images: [{ url: '/media/lesenie_1-e1681134827533.jpg' }],
+    url: 'https://www.lemino.sk/lesenie',
+    images: [{ url: '/media/lesenie_1-e1681134827533.jpg', width: 1200, height: 630, alt: 'Fasádne lešenie na prenájom — Lemino Bratislava' }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Prenájom lešenia Bratislava — Lemino s.r.o.',
+    description: 'Fasádne a mobilné lešenie na prenájom v Bratislave. Systém PERI UP, CUSTERS. Montáž a projekt v cene.',
+    images: ['/media/lesenie_1-e1681134827533.jpg'],
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Domov', item: 'https://www.lemino.sk' },
+    { '@type': 'ListItem', position: 2, name: 'Prenájom lešenia Bratislava', item: 'https://www.lemino.sk/lesenie' },
+  ],
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://www.lemino.sk/lesenie#service',
+  name: 'Prenájom lešenia Bratislava',
+  description: 'Fasádne a mobilné lešenie na prenájom v Bratislave. Systém PERI UP, hliníkové lešenia CUSTERS. Montáž a projekt nasadenia.',
+  provider: { '@id': 'https://www.lemino.sk/#business' },
+  areaServed: { '@type': 'City', name: 'Bratislava' },
+  serviceType: 'Prenájom lešenia',
 };
 
 export default function LeseniePage() {
   return (
     <main className="-mt-20 lg:-mt-24">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <PageHero
         eyebrow={pageData.eyebrow}
         title={pageData.title}

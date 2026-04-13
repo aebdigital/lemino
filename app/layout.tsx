@@ -36,34 +36,52 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'sk_SK',
     siteName: 'Lemino',
-    images: [{ url: '/media/uvodna-fotka.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/media/uvodna-fotka.jpg', width: 1200, height: 630, alt: 'Lešenie, debnenie a výťahy — Lemino Bratislava' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
   },
   robots: { index: true, follow: true },
 };
 
-const localBusinessSchema = {
+const siteSchema = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'Lemino s.r.o.',
-  description:
-    'Prenájom fasádneho lešenia, stropného debnenia a stavebných výťahov v Bratislave a okolí.',
-  url: 'https://www.lemino.sk',
-  telephone: '+421948303906',
-  email: 'lemino@lemino.sk',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Na Výslní 3/B',
-    addressLocality: 'Bratislava',
-    postalCode: '821 09',
-    addressCountry: 'SK',
-  },
-  geo: { '@type': 'GeoCoordinates', latitude: 48.1492, longitude: 17.1422 },
-  areaServed: [
-    { '@type': 'City', name: 'Bratislava' },
-    { '@type': 'AdministrativeArea', name: 'Bratislavský kraj' },
+  '@graph': [
+    {
+      '@type': 'LocalBusiness',
+      '@id': 'https://www.lemino.sk/#business',
+      name: 'Lemino s.r.o.',
+      description:
+        'Prenájom fasádneho lešenia, stropného debnenia a stavebných výťahov v Bratislave a okolí.',
+      url: 'https://www.lemino.sk',
+      telephone: '+421948303906',
+      email: 'lemino@lemino.sk',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Na Výslní 3/B',
+        addressLocality: 'Bratislava',
+        postalCode: '821 09',
+        addressCountry: 'SK',
+      },
+      geo: { '@type': 'GeoCoordinates', latitude: 48.1492, longitude: 17.1422 },
+      areaServed: [
+        { '@type': 'City', name: 'Bratislava' },
+        { '@type': 'AdministrativeArea', name: 'Bratislavský kraj' },
+      ],
+      sameAs: ['https://www.facebook.com/lesenienaprenajom/'],
+      priceRange: '€€',
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.lemino.sk/#website',
+      url: 'https://www.lemino.sk',
+      name: 'Lemino',
+      description:
+        'Prenájom lešenia, stropného debnenia, stavebných výťahov a sklzov v Bratislave a okolí.',
+      publisher: { '@id': 'https://www.lemino.sk/#business' },
+      inLanguage: 'sk-SK',
+    },
   ],
-  sameAs: ['https://www.facebook.com/lesenienaprenajom/'],
-  priceRange: '€€',
 };
 
 export default function RootLayout({
@@ -76,7 +94,7 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
         />
       </head>
       <body>

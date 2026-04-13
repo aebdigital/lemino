@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -7,6 +8,27 @@ import { GalleryGrid } from '@/components/gallery-grid';
 import { HomeHero } from '@/components/home-hero';
 import { SectionHeading } from '@/components/section-heading';
 import { homeGallery, homeServicePreviews, reasons, stats } from '@/data/site';
+
+export const metadata: Metadata = {
+  title: 'Lemino | Lešenie, debnenie a výťahy Bratislava',
+  description:
+    'Prenájom lešenia, stropného debnenia, stavebných výťahov a sklzov v Bratislave a okolí. Montáž, demontáž, poradenstvo. Rýchle nasadenie, férová cena.',
+  alternates: { canonical: 'https://www.lemino.sk' },
+  openGraph: {
+    title: 'Lemino — Lešenie, debnenie a výťahy Bratislava',
+    description:
+      'Prenájom lešenia, stropného debnenia, stavebných výťahov a sklzov v Bratislave a okolí. Montáž, demontáž, poradenstvo. Rýchle nasadenie, férová cena.',
+    url: 'https://www.lemino.sk',
+    images: [{ url: '/media/uvodna-fotka.jpg', width: 1200, height: 630, alt: 'Lešenie, debnenie a výťahy — Lemino Bratislava' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Lemino — Lešenie, debnenie a výťahy Bratislava',
+    description:
+      'Prenájom lešenia, stropného debnenia a stavebných výťahov v Bratislave. Rýchle nasadenie, férová cena.',
+    images: ['/media/uvodna-fotka.jpg'],
+  },
+};
 
 export default function HomePage() {
   return (
